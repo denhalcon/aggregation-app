@@ -1,5 +1,5 @@
 data-sources:
-  - name: data-base-1
+  - name: database-1
     strategy: postgres #this property is optional, only if you implements multiple
     url: jdbc:postgresql://localhost:5432/agg_app_db
     table: users
@@ -10,3 +10,14 @@ data-sources:
       username: login
       name: first_name
       surname: last_name
+  - name: database-2
+    strategy: mysql #this property is optional, only if you implements multiple
+    url: jdbc:mysql://localhost:3306/user_db
+    table: user_table
+    user: user
+    password: password
+    mapping:
+      id: ldap_login
+      username: ldap_login
+      name: name
+      surname: surname

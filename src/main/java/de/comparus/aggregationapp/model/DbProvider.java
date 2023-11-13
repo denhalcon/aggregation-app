@@ -6,7 +6,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public enum DbProvider {
-    POSTGRES("org.postgresql.Driver");
+    POSTGRES("org.postgresql.Driver"),
+    MYSQL("com.mysql.cj.jdbc.Driver");
 
     private final String driverClassName;
 }
