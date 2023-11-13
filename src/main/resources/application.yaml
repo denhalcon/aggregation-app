@@ -1,0 +1,12 @@
+data-sources:
+  - name: data-base-1
+    strategy: postgres #this property is optional, only if you implements multiple
+    url: jdbc:postgresql://localhost:5432/agg_app_db
+    table: users
+    user: test_user
+    password: test_pass
+    mapping:
+      id: user_id
+      username: login
+      name: first_name
+      surname: last_name
