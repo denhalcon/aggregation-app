@@ -1,7 +1,7 @@
 data-sources:
-  - name: database-1
+  - name: test-db-1
     strategy: postgres
-    url: jdbc:postgresql://localhost:5432/agg_app_db
+    url: ${TEST_DB_1_URL}
     table: users
     user: test_user
     password: test_pass
@@ -10,9 +10,9 @@ data-sources:
       username: login
       name: first_name
       surname: last_name
-  - name: database-2
+  - name: test-db-2
     strategy: mysql
-    url: jdbc:mysql://localhost:3306/user_db
+    url: ${TEST_DB_2_URL}
     table: user_table
     user: user
     password: password
